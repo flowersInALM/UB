@@ -30,4 +30,13 @@ $(function(){
 			return;
 		}
 	})
+
+	$('.sec01 .in-li').on('mouseenter',function(){
+		$(this).addClass('bounce');
+		var x = $(this).index();
+		$('.sec01 .in-int').eq(x).addClass('active').siblings('.in-int').removeClass('active');
+		$(this).on('mouseleave',function(){
+			$(this).removeClass('bounce');
+		})
+	})
 });

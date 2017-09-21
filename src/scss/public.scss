@@ -963,6 +963,7 @@ $actcolor:#00336C;
 		.in-li{
 			padding:0 10px;
 			background: url('../img/two.png') no-repeat top center;
+			background-size:cover;
 			text-align:center;
 		}
 		.in-tit{
@@ -984,6 +985,7 @@ $actcolor:#00336C;
 		text-align: center;
 		position:relative;
 		.in-int{
+			width:100%;
 			position:absolute;
 			left:-150%;
 			top:50px;
@@ -992,7 +994,6 @@ $actcolor:#00336C;
 				left:0;
 			}
 		}
-
 	}
 	.btn{
 		width:240px;
@@ -1192,6 +1193,27 @@ $actcolor:#00336C;
 			}
 		}
 	}
+	.sec01{
+		.in-list{
+			padding-top:0;
+			margin-top: 0;
+			.in-li{
+				background:none;
+			}
+			.in-tit{
+				font-size:20px;
+				margin-top:0px;
+			}
+			.in-logo{
+				width:100px;
+			}
+		}
+		.in-intro{
+			.in-int{
+				left:-300%;
+			}
+		}
+	}
 }
 @media only screen and (max-width:768px){
 	.clm-s-11{
@@ -1356,6 +1378,24 @@ $actcolor:#00336C;
 				.in-txt{
 					min-height:0;
 				}
+			}
+		}
+	}
+	.sec01{
+		.in-list{
+			padding:0;
+			.in-li{
+				width:33%;
+				padding:10px;
+				.in-logo{
+					width:100%;
+				}
+			}
+		}
+		.in-intro{
+			padding:0;
+			.in-int{
+				top:20px;
 			}
 		}
 	}

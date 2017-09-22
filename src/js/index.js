@@ -38,5 +38,41 @@ $(function(){
 		$(this).on('mouseleave',function(){
 			$(this).removeClass('bounce');
 		})
+	});
+
+	// siderbar;
+	var isOpen  = true;
+	$('.f-open').on('click',function(){
+		if(isOpen){
+			$(this).addClass('myclose');
+			$('.rit-f').addClass('myclose');
+			isOpen = false;
+			return;
+		}else{
+			$(this).removeClass('myclose');
+			$('.rit-f').removeClass('myclose');
+			isOpen = true;
+			return;
+		}
 	})
+
+	//toTop;
+  	var $totop = $(window).scrollTop();
+	addEventListener('scroll',function(){
+		$totop = $(window).scrollTop();
+		if($totop >= 100){
+			$('.goTop').show();
+		}else{
+			$('.goTop').hide();
+		}
+	},false);
+	if($totop >= 100){
+		$('.goTop').show();
+	}else{
+		$('.goTop').hide();
+	}
+	$('.goTop').on('click',function(){
+		$('body,html').animate({scrollTop:0},1000);
+		return false;
+	});
 });

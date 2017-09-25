@@ -1337,7 +1337,7 @@ $actcolor:#00336C;
 	}
 	.title{
 		h2{
-			font-size:16px;
+			font-size:18px;
 		}
 		.subtit{
 			font-size:14px;
@@ -1452,20 +1452,48 @@ $actcolor:#00336C;
 	}
 	.sec{
 		padding-top:40px;
+		.intro{
+			margin-bottom:20px;
+		}
+	}
+	.sec01{
+		.in-list{
+			margin-bottom: 0;
+			.in-tit{
+				font-size:16px;
+				margin-top: 0px;
+			}
+		}
+		.in-intro{
+			font-size:14px;
+			min-height: 120px;
+		}
+		.btn{
+			width:220px;
+			height:45px;
+			line-height:45px;
+			margin:20px auto;
+		}
 	}
 	.sec02{
+		padding-bottom:40px;
 		.con{
 			.adv-lf{
 				text-align: center;
 				p{
 					margin:0 auto;
 				}
+				h3{
+					font-size:15px;
+					line-height: 2;
+					margin-top: 15px;
+				}
 			}
 			.fr{
 				margin-top:55px;
 			}
 			.adv-rt{
-				width:90%;
+				width:40%;
 			}
 		}
 	}
@@ -1476,6 +1504,12 @@ $actcolor:#00336C;
 				margin:20px 1%;
 			}
 		}
+	}
+	.f-open{
+		display: none;
+	}
+	.rit-f{
+		display: none;
 	}
 }
 @media screen and (max-width:480px){
@@ -1488,6 +1522,12 @@ $actcolor:#00336C;
 				.in-txt{
 					min-height:0;
 				}
+				.in-tit{
+					font-size:16px;
+				}
+			}
+			.iconfont{
+				margin-bottom:0;
 			}
 		}
 	}
@@ -1495,8 +1535,10 @@ $actcolor:#00336C;
 		.in-list{
 			padding:0;
 			.in-li{
+				height:180px;
 				.in-logo{
-					width:100%;
+					width:90%;
+					margin:25px auto;
 				}
 			}
 		}

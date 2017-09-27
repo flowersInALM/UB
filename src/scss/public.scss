@@ -1032,7 +1032,11 @@ $actcolor:#00336C;
 			color:$white;
 		}
 		&:hover{
-			background:lighten($actcolor,10%);
+			background:$white;
+			border:1px solid $actcolor;
+			a{
+				color:$actcolor;
+			}
 		}
 	}
 }

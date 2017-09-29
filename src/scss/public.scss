@@ -803,7 +803,6 @@ $actcolor:#00336C;
 		border-bottom:1px solid $gray;
 		overflow:hidden;
 		padding-bottom:10px;
-		margin-bottom: 50px;
 		.name{
 			font-size:20px;
 			line-height: 1.5;
@@ -969,6 +968,9 @@ $actcolor:#00336C;
 						.icon25{
 							background-position:-329px -66px;
 						}
+						.ud{
+							display: none;
+						}
 						.tit{
 							line-height: 3;
 							font-size:18px;
@@ -1030,7 +1032,9 @@ $actcolor:#00336C;
 					line-height:2;
 				}
 			}
-
+		}
+		.title{
+			margin-top:50px;
 		}
 	}
 	.process{
@@ -1444,6 +1448,27 @@ $actcolor:#00336C;
 			.cen-list{
 				padding:50px 0;
 			}
+			.area{
+				text-align: center;
+				li{
+					float:none;
+					width:160px;
+					padding:20px 0;
+					display: inline-block;
+					.name{
+						font-size:16px;
+					}
+				}
+			}
+			.scene{
+				text-align: center;
+				li{
+					float:none;
+					width:200px;
+					display: inline-block;
+
+				}
+			}
 		}
 		.process{
 			li{
@@ -1608,6 +1633,11 @@ $actcolor:#00336C;
 		}
 	}
 	.center{
+		.cen-inner{
+			.title{
+				margin-top:30px;
+			}
+		}
 		.inner{
 			p{
 				font-size:14px;
@@ -1725,6 +1755,41 @@ $actcolor:#00336C;
 			padding:0;
 			.in-int{
 				top:20px;
+			}
+		}
+	}
+	.center{
+		.cen-inner{
+			.scene{
+				li{
+					width:90%;
+					height:220px;
+					img{
+						width:100%;
+						height:auto;
+					}
+					.ud{
+						display: none;
+					}
+					&:hover{
+						.maskup{
+							padding-top:20px;
+							.tit{
+								font-size: 16px;
+							}
+						}
+					}
+				}
+				.maskup{
+					padding:20px;
+					.tit{
+						line-height:3;
+						font-size:16px;
+					}
+					.c-intro{
+						display: block;
+					}
+				}
 			}
 		}
 	}

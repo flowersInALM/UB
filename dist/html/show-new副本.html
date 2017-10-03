@@ -17,19 +17,19 @@
 	<link rel="stylesheet" href="../css/reset.css">
 	<link rel="stylesheet" href="../css/animate.css">
 	<link rel="stylesheet" href="../css/public.css">
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GkwuTWpGXhcuCwjNIwvQrNqWWRkMw0TW"></script>
+	<link rel="stylesheet" href="../css/show-new.css">
 </head>
 <body>
 	<!-- header start -->
 	<header class="header clm-12" id="header">
 		<div class="container">
 			<div class="logo fl">
-				<a href="../index.html">
+				<a href="index.html">
 					<img src="../img/logo.png" class="logo-pc" alt="">
 					<img src="../img/logo-b.png" class="logo-ph" alt="">
 				</a>
 			</div>
-		<ul class="nav-list">
+			<ul class="nav-list">
 				<li class="nav-li">
 					<a href="../index.html">
 						首页
@@ -54,13 +54,13 @@
 						<i class="underline"></i>
 					</a>
 				</li>
-				<li class="nav-li">
+				<li class="nav-li cur">
 					<a href="case.html">
 						案例
 						<i class="underline"></i>
 					</a>
 				</li>
-				<li class="nav-li cur">
+				<li class="nav-li">
 					<a href="contact.html">
 						联系
 						<i class="underline"></i>
@@ -71,7 +71,7 @@
 	</header>
 	<header id="headerPh" class="header-ph clm-12">
 		<a href="javascript:void(0);" id="phMenu" class="menudown clm-12 tran3">
-			<span class="menu-open">联系我们</span>
+			<span class="menu-open"> 项目展示</span>
 			<span class="menu-close hiden">关闭</span>
 			<i class="iconfont down"></i>
 		</a>
@@ -101,44 +101,82 @@
 	<!-- ban start -->
 	<section class="ban clm-12 low">
 		<div class="ban-bg">
-			<img src="../img/ban-bg-4.jpg" alt="">
+			<img src="../img/ban-bg-1.jpg" alt="">
 		</div>
 		<div class="container">
 			<div class="tit">
 				<img src="../img/logo.png" alt="">
 				<span class="dot">·</span>
-				<span class="slogen">联系我们</span>
+				<span class="slogen">项目展示</span>
 			</div>
 		</div>
 	</section>
 	<!-- ban end -->
 
 	<!-- center start -->
-	<section class="center">
-		<div class="container">
-			<div class="title wow fadeInUp">
-				<h2>联系方式</h2>
-				<div class="udline"></div>
-			</div> 
-			<div class="inner wow fadeInUp">
-				<div class="fl clm-6 clm-m-12">
-					<div class="pic">
-						<img src="../img/cont-pic01.jpg" alt="">
+	<div class="center">
+		<div class="title wow fadeInUp">
+			<h2>国家大剧院</h2>
+			<div class="catelog">标签：<span>网站群</span> <span>文化</span></div>
+			<div class="intro">lalalalalalalalalalalalallal</div>
+		</div>
+			
+		<div class="focus">
+			<img src="../img/mac.png" alt="">
+			<div class="frame">
+				<div class="scroll">
+					<div class="childe">
+						<img src="../img/show-01-01.jpg" alt="">
+					</div>
+					<div class="childe">
+						<img src="../img/show-01-01.jpg" alt="">
+					</div>
+					<div class="childe">
+						<img src="../img/show-01-01.jpg" alt="">
 					</div>
 				</div>
-				<div class="fr clm-6 clm-m-12">
-					<p>在这里我们会为您解决使用过程中遇到的所有疑问</p>
-					<br>
-					<p><img width="24" src="../img/icon_show.png">　客服电话：010-87714139</p>
-					<p><img width="24" src="../img/icon_show.png">　客服邮箱：<span>info@uoobang.com</span></p>
+				<div class="bar">
+					<div class="inner">
+						<span class="prev"></span>
+						<div class="nav">
+							<i class="now"></i>
+							<i></i>
+							<i></i>
+						</div>
+						<span class="next"></span>
+					</div>
 				</div>
 			</div>
-			<div class="map">
-				<div id="map"></div>
+		</div>
+
+		<div class="focus2">
+			<img src="../img/iphone.png" alt="">
+			<div class="frame">
+				<div class="scroll">
+					<div class="childe">
+						<img src="../img/show-02-01.png" alt="">
+					</div>
+					<div class="childe">
+						<img src="../img/show-02-01.png" alt="">
+					</div>
+					<div class="childe">
+						<img src="../img/show-02-01.png" alt="">
+					</div>
+				</div>
+				<div class="bar">
+					<div class="inner">
+						<span class="prev"></span>
+						<div class="nav">
+							<i class="now"></i>
+							<i></i>
+							<i></i>
+						</div>
+						<span class="next"></span>
+					</div>
+				</div>
 			</div>
-		</div>	
-		<!-- Main end -->
-	</section>
+		</div>
+	</div>
 	<!-- center end -->
 
  	<!-- footer start -->
@@ -235,47 +273,4 @@
 <script src="../js/jquery-1.12.4.js"></script>
 <script src="../js/wow.js"></script>
 <script src="../js/index.js"></script>
-<script>
-	$(function(){
-		//地图；
-	    var map = new BMap.Map("map"); 
-	    var point = new BMap.Point(116.448818,39.89893)
-	    map.centerAndZoom(point, 17);
-	    var marker = new BMap.Marker(point);
-	    map.addOverlay(marker);
-	    var opts = {
-	      width : 200,     
-	      height: 100,  
-	      title : "友邦智信" , // 信息窗口标题
-	      enableMessage:true
-	    }
-	    var infoWindow = new BMap.InfoWindow("地址：北京市东城区广渠门南小街1号一号楼一单元2008", opts);  // 创建信息窗口对象 
-	    map.openInfoWindow(infoWindow,point); //开启信息窗口
-	    marker.addEventListener("click", function(){          
-	        map.openInfoWindow(infoWindow,point); //开启信息窗口
-	    });
-	    map.addControl(new BMap.MapTypeControl());   
-	    map.setCurrentCity("北京");  
-	    // map.enableScrollWheelZoom();
-	    var navigationControl = new BMap.NavigationControl({
-	        anchor: BMAP_ANCHOR_TOP_LEFT,
-	        type: BMAP_NAVIGATION_CONTROL_LARGE,
-	        enableGeolocation: true
-	    });
-	    map.addControl(navigationControl);
-	    var geolocationControl = new BMap.GeolocationControl();
-	    geolocationControl.addEventListener("locationSuccess", function(e){
-	        var address = '';
-	        address += e.addressComponent.province;
-	        address += e.addressComponent.city;
-	        address += e.addressComponent.district;
-	        address += e.addressComponent.street;
-	        address += e.addressComponent.streetNumber;
-	        alert("当前定位地址为：" + address);
-	    });
-	    geolocationControl.addEventListener("locationError",function(e){
-	        console(e.message);
-	    });
-	})
-</script>
 </html>

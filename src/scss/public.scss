@@ -545,7 +545,7 @@ $actcolor:#00336C;
 				position:absolute;
 				left:0;
 				top:0;
-				background:$actcolor;
+				background:lighten($actcolor,15%);
 				opacity: 0.8;
 				z-index: 2;
 			}
@@ -1084,6 +1084,7 @@ $actcolor:#00336C;
 		}
 	}
 	.show{
+		padding-top:40px;
 		ul{
 			width:100%;
 		}

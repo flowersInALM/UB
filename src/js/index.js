@@ -157,7 +157,7 @@ $(function(){
 					}
 					iAll[now].className = 'now';
 				}
-				_this.targetDom.querySelector('.scroll').cssText = 'marginLeft:-' + (now * _this.childWid) + 'px;transition:all 0.3s ease 0s;'
+				_this.targetDom.querySelector('.scroll').style.cssText = 'margin-left:-' + (now * _this.childWid) + 'px;'
 			};
 			_this.prevBtn.addEventListener('click',function(){
 				ClickPage('prev');	

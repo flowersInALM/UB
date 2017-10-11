@@ -518,7 +518,7 @@ $actcolor:#00336C;
 						padding-top:97px;
 					}
 					.mask{
-						background: darken($actcolor,15%);
+						opacity: 0.9;
 					}
 				}
 			}
@@ -545,8 +545,8 @@ $actcolor:#00336C;
 				position:absolute;
 				left:0;
 				top:0;
-				background:lighten($actcolor,15%);
-				opacity: 0.8;
+				background:$black;
+				opacity: 0.7;
 				z-index: 2;
 			}
 			.cont{
@@ -730,26 +730,15 @@ $actcolor:#00336C;
 	.top{
 		height:40px;
 		border-bottom:1px solid #3e3e3e;
-		.link-btn{
-			float:left;
-			font-size:18px;
-			margin-right:20px;
-			line-height: 30px;
-			a{
-				color:$white;
-				position:relative;
-				&:hover{
-					color:lighten($actcolor,10%);
-				}
-			}
-		}
-		.fr{
+		.fl{
 			span{
 				color:$gray9;
 				font-size:18px;
 				line-height: 40px;
 				font-weight:bold;
 			}
+		}
+		.fr{
 			a{
 				color: $gray9;
 				background:#484848;

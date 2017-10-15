@@ -282,41 +282,33 @@ $actcolor:#00336C;
 }
 .header-ph{
 	position:relative;
-	top:0;
+	top:0px;
 	left:0;
+	margin-top:-55px;
 	z-index: 5;
 	display:none;
 	height:44px;
-	background:$actcolor;
+	background:transparent;
 	.menudown{
 		display: block;
 		height:100%;
 		line-height: 100%;
-		color:$white;
+		color:$actcolor;
 		position:relative;
 		padding:14px 10px 14px 15px;
-		text-align: center;
-		font-size:14px;	
-		.down::before{
-			position:absolute;
-			right:15px;
-			top:16px;
-			content:'\e601';
-			font-size:12px;
-			color:$white;
+		text-align: right;
+		font-size:20px;	
+		float:right;
+		.menu-btn{
+			display: block;
 		}
-		.up::before{
-			content:'\e620';
-			position:absolute;
-			right:15px;
-			top:16px;
-			font-size:12px;
-			color:$white;
+		.close-btn{
+			display: none;
 		}
 	}
 	&:hover{
 		a{
-			color:#fff;
+			color:$actcolor;
 		}
 	}
 	.menu-ph{
@@ -325,7 +317,7 @@ $actcolor:#00336C;
 		z-index: 200;
 		width:100%;
 		height:auto;
-		background:lighten($actcolor,10%);
+		background:$white;
 		position:absolute;
 		top:64px;
 		left:0;
@@ -334,8 +326,9 @@ $actcolor:#00336C;
 			height: 35px;
 			line-height: 35px;
 			font-size:14px;
+			border-bottom:1px solid $actcolor;
 			a{
-				color:#fff;
+				color:$actcolor;
 				text-align: center;
 				display: block;
 			}
@@ -1026,6 +1019,92 @@ $actcolor:#00336C;
 		.title{
 			margin-top:50px;
 		}
+		.nav-box{
+			width:85%;
+			margin:0 auto;
+			text-align: center;
+			overflow: hidden;
+			li{
+				width:100px;
+				display: inline-block;
+				float: left;
+				margin:0 15px;
+				cursor:pointer;
+				span{
+					display: block;
+				    width: 100px;
+				    height: 98px;
+				    background: url(http://www.szbelleapp.com/css/../images/icon_s.png) no-repeat;
+				}
+				strong{
+					font-size: 16px;
+				    font-weight: normal;
+				    padding-top: 12px;
+				    display: block;
+				}
+				.service_icon_1{
+					background-position: 0px 0px;
+				}
+				.service_icon_2{
+					background-position: -130px 0px;
+				}
+				.service_icon_3{
+					background-position: -260px 0px;
+				}
+				.service_icon_4{
+					background-position: -390px 0px;
+				}
+				.service_icon_5{
+					background-position: -520px 0px;
+				}
+				.service_icon_6{
+					background-position: -650px 0px;
+				}
+				.service_icon_7{
+					background-position: -780px 0px;
+				}
+			}
+			.on{
+				.service_icon_1{
+					background-position: 0px bottom;
+				}
+				.service_icon_2{
+					background-position: -130px bottom;
+				}
+				.service_icon_3{
+					background-position: -260px bottom;
+				}
+				.service_icon_4{
+					background-position: -390px bottom;
+				}
+				.service_icon_5{
+					background-position: -520px bottom;
+				}
+				.service_icon_6{
+					background-position: -650px bottom;
+				}
+				.service_icon_7{
+					background-position: -780px bottom;
+				}
+			}
+		}
+		.content-box{
+			padding-top: 70px;
+		    max-width: 930px;
+		    margin: 0 auto;
+		    text-align: center;
+	        height: 120px;
+    		overflow: hidden;
+    		ul{
+    			width:20000px;
+    			overflow: hidden;
+    		}
+    		li{
+    			float:left;
+    			line-height: 30px;
+    			display: block;
+    		}
+		}
 	}
 	.process{
 		overflow:hidden;
@@ -1394,16 +1473,15 @@ $actcolor:#00336C;
 	.header{
 		background:$white;
 		position:relative;
+		height:60px;
 		.nav-list{
 			display: none;
 		}
 		.logo{
-			padding:10px 0 40px 0;
-			float:none;
-			width:100%;
+			padding:15px 0;
+			width:auto;
 			.logo-ph{
 				display: block;
-				margin:0 auto;
 			}
 			.logo-pc{
 				display: none;
@@ -1417,9 +1495,14 @@ $actcolor:#00336C;
 	.ban{
 		&.index-ban{
 			height:580px;
+			background: url('../img/index-ban-bg.png') no-repeat center center;
+			background-size: cover;
 		}
 		.index-con{
 			margin-top:140px;
+		}
+		video{
+			display: none;
 		}
 	}
 	.black{

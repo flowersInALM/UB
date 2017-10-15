@@ -12,16 +12,14 @@ $(function(){
 	var isMenuDown = false;
 	$('.menudown').on('click',function(){
 		if(isMenuDown == false){
-			$('.menu-open').addClass('hiden');
-			$('.menu-close').removeClass('hiden');
-			$('.down').removeClass('down').addClass('up');
+			$('.menu-btn').hide();
+			$('.close-btn').show();
 			$(".menu-ph").show().removeClass('menuhide').addClass('menushow');
 			isMenuDown = true;
 			return;
 		}else{
-			$('.menu-open').removeClass('hiden');
-			$('.menu-close').addClass('hiden');
-			$('.up').removeClass('up').addClass('down');
+			$('.menu-btn').show();
+			$('.close-btn').hide();
 			$('.menu-ph').removeClass('menushow').addClass('menuhide');
 			setTimeout(function(){
 				$('.menu-ph').hide();
@@ -167,7 +165,73 @@ $(function(){
 			});
 		}
 	}
+
+	var carousel = function(targetDom,options){
+		if(!(this instanceof carousel)) return new carousel(targetDom,options);
+		if((typeof targetDom) === 'string'){
+			this.targetDom = document.querySelector(targetDom);
+		}else{
+			this.targetDom = targetDom;
+		}
+		this.speed = options.speed ? options.speed : 500;
+		this.duration = options.duration ? options.duration : 3000; 
+		options.prevBtn = options.prevBtn ? options.prevBtn : '.prev-btn';
+		if((typeof options.prevBtn) === 'string'){
+			this.prevBtn = this.targetDom.querySelector(options.prevBtn);
+		}else{
+			this.prevBtn = options.prevBtn;
+		}
+		options.nextBtn = options.nextBtn ? options.nextBtn : '.next-btn';
+		if((typeof options.nextBtn) === 'string'){
+			this.nextBtn = this.targetDom.querySelector(options.nextBtn);
+		}else{
+			this.nextBtn = options.nextBtn;
+		}
+		this.effect = options.effect;
+		this.navBox = this.targetDom.querySelector('.nav-box');
+		this.navList = this.navBox.querySelectorAll('li');
+		this.contentBox = this.targetDom.querySelector('.content-box');
+		this.contentList = this.contentBox.querySelectorAll('li');
+		this.contBoxWid = this.contentBox.offsetWidth;
+		console.log(this.contBoxWid);
+		this.init();
+	}
+	carousel.prototype = {
+		init : function(){
+			this.event();
+			this.clickNav();
+		},
+		event : function(){
+			var _this = this;
+			for( var i = 0 ;i < _this.contentList.length; i ++){
+				_this.contentList[i].style.width = _this.contBoxWid + 'px';
+			}
+			_this.targetDom.addEventListener('resize',function(){
+				_this.contBoxWid = _this.contentBox.offsetWidth;
+				for( var i = 0 ;i < _this.contentList.length; i ++){
+					_this.contentList[i].style.width = _this.contBoxWid + 'px';
+				}
+			})
+
+			console.log(1);
+		},
+		clickNav : function(){
+			var _this = this;
+			_this.navBox.onclick = function(e){
+				var ev = e || window.event;
+				if(ev.srcElement.parentElement.nodeName == 'LI'){
+					for(var i = 0 ;i < _this.navList.length; i++){
+						_this.navList[i].className = '';
+					}
+					ev.srcElement.parentElement.className = 'on';
+				}else{
+					return;
+				}
+			}
+		}
+	}
 	window.FunPage = FunPage;
+	window.carousel = carousel;
 }(window,document));
 
 

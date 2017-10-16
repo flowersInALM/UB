@@ -473,12 +473,13 @@ $actcolor:#00336C;
 		line-height: 1.5;
 		height:135px;
 		color:$white;
-		font-size: 32px;
-		font-weight: 700;
+		font-size: 28px;
+		font-weight: 500;
 		font-family: "微软雅黑";
 		letter-spacing: 3px;
 		text-align: center;
 		img{
+			vertical-align: sub;
 			width:auto;
 			display: inline-block;
 		}
@@ -1093,11 +1094,9 @@ $actcolor:#00336C;
 		    max-width: 930px;
 		    margin: 0 auto;
 		    text-align: center;
-	        height: 120px;
     		overflow: hidden;
     		ul{
     			width:20000px;
-    			overflow: hidden;
     		}
     		li{
     			float:left;

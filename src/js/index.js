@@ -331,12 +331,7 @@ $(function(){
 			var first = _this.contentList[0].cloneNode(true);
 			_this.contentBox.querySelector('ul').appendChild(first);
 		},
-		move : function(){
-			var _this = this;
-			_this.index --;
-			this.animation(_this.contentBox.querySelector('ul'),'margin-left' , '-' + _this.index * _this.contBoxWid);
-			_this.navList[_this.index].className = 'on';
-		},
+		
 		clickNav : function(){
 			var _this = this;
 			_this.targetDom.onclick = function(e){

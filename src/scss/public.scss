@@ -1028,7 +1028,6 @@ $actcolor:#00336C;
 			li{
 				width:100px;
 				display: inline-block;
-				float: left;
 				margin:0 15px;
 				cursor:pointer;
 				span{
@@ -1542,6 +1541,10 @@ $actcolor:#00336C;
 
 				}
 			}
+
+			.content-box{
+				display: none;
+			}
 		}
 		.process{
 			li{
@@ -1709,6 +1712,14 @@ $actcolor:#00336C;
 		.cen-inner{
 			.title{
 				margin-top:30px;
+			}
+			.nav-box{
+				width:100%;
+				li{
+					strong{
+						padding-bottom:15px;
+					}
+				}
 			}
 		}
 		.inner{

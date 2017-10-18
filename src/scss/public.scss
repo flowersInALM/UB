@@ -322,11 +322,12 @@ $actcolor:#00336C;
 		top:64px;
 		left:0;
 		li{
-			width:100%;
+			width:90%;
+			margin:0 auto;
 			height: 35px;
 			line-height: 35px;
 			font-size:14px;
-			border-bottom:1px solid $actcolor;
+			border-bottom:1px solid #eee;
 			a{
 				color:$actcolor;
 				text-align: center;

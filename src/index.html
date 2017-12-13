@@ -19,8 +19,6 @@
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/public.css">
-
-	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=GkwuTWpGXhcuCwjNIwvQrNqWWRkMw0TW"></script>
 </head>
 <body>
 	<!-- header start -->
@@ -276,14 +274,19 @@
 	<!-- black end -->
 
 	<!-- map start -->
-	<section class="map">
+	<section class="contact">
 		<div class="title wow fadeInUp">
 			<h2>我们在这里等着你的到来</h2>
 			<div class="udline"></div>
-			<div class="subtit">为您提供最贴心的售后服务</div>
+			<div class="subtit">7*24小时竭诚为您服务</div>
 		</div>
-		<div id="map">
-			
+		<p class="tel wow fadeInUp">01087714139</p>
+		<div class="contactbox">
+			<ul>
+        	<li class="tac-li1"><a target="_blank" href="tencent://message/?uin=1711174835&amp;Site=www.xmwpwl.com&amp;Menu=yes"><i class="iconfont">&#xe629;</i><p>在线QQ客服</p><span>8:30-20:30</span></a></li>
+            <li class="tac-li2"><i class="iconfont">&#xe673;</i><p>关注官方微信</p><span>UOOBANG</span><div class="contactewm"><img src="img/qr_code.png"></div></li>
+            <li class="tac-li3"><i class="iconfont">&#xe641;</i><p>客服在线咨询</p><span>7*24小时在线</span></li>
+        </ul>
 		</div>
 	</section>
 	<!-- map end -->
@@ -361,47 +364,4 @@
 <script src="js/jquery-1.12.4.js"></script> 
 <script src="js/wow.js"></script>
 <script src="js/index.js"></script>
-<script>
-	$(function(){
-		 //地图；
-	    var map = new BMap.Map("map"); 
-	    var point = new BMap.Point(116.45493,39.89868)
-	    map.centerAndZoom(point, 17);
-	    var marker = new BMap.Marker(point);
-	    map.addOverlay(marker);
-	    var opts = {
-	      width : 200,     
-	      height: 100,  
-	      title : "友邦智信" , // 信息窗口标题
-	      enableMessage:true
-	    }
-	    var infoWindow = new BMap.InfoWindow("地址：北京市东城区广渠门外名敦道4-1210", opts);  // 创建信息窗口对象 
-	    map.openInfoWindow(infoWindow,point); //开启信息窗口
-	    marker.addEventListener("click", function(){          
-	        map.openInfoWindow(infoWindow,point); //开启信息窗口
-	    });
-	    map.addControl(new BMap.MapTypeControl());   
-	    map.setCurrentCity("北京");  
-	    // map.enableScrollWheelZoom();
-	    var navigationControl = new BMap.NavigationControl({
-	        anchor: BMAP_ANCHOR_TOP_LEFT,
-	        type: BMAP_NAVIGATION_CONTROL_LARGE,
-	        enableGeolocation: true
-	    });
-	    map.addControl(navigationControl);
-	    var geolocationControl = new BMap.GeolocationControl();
-	    geolocationControl.addEventListener("locationSuccess", function(e){
-	        var address = '';
-	        address += e.addressComponent.province;
-	        address += e.addressComponent.city;
-	        address += e.addressComponent.district;
-	        address += e.addressComponent.street;
-	        address += e.addressComponent.streetNumber;
-	        alert("当前定位地址为：" + address);
-	    });
-	    geolocationControl.addEventListener("locationError",function(e){
-	        console(e.message);
-	    });
-	})
-</script>
 </html>

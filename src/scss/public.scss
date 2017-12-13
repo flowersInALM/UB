@@ -705,16 +705,83 @@ $actcolor:#00336C;
 }
 // project end;
 
-// map start;
-.map{
-	padding:50px 0 40px 0;
+// contact start;
+.contact{
+	padding:50px 0;
+	.tel{
+		font-size:30px;
+		color:#333;
+		text-align: center;
+		line-height:1.5;
+		padding:15px 0;
+	}
+	.contactbox{
+		width:1019px;
+		border:1px solid #d2d2d2;
+		border-left:0;
+		margin:0 auto;
+		ul{
+			width:100%;
+			overflow: hidden;
+			li{
+				width:338px;
+				float:left;
+				border-left:1px solid #d2d2d2;
+				padding:23px 0;
+				position:relative;
+				overflow: visible;
+				cursor:pointer;
+				opacity: 1;
+				.contactewm{
+					position: absolute;
+				    top: 0;
+				    left: -30px;
+				    opacity: 0;
+				    transition: all 0.3s ease;
+				    img{
+				    	width:100px;
+				    	height:100px;
+				    }
+				}
+				a{
+					display: block;
+				}
+				i{
+					font-style: normal;
+					font-size:40px;
+					line-height: 60px;
+					float:left;
+					width:65px;
+					height:55px;
+					margin:0 10px 0 80px;
+					color:#999;
+					transition: color 0.3s ease;
+				}
+				p{
+					font-size:16px;
+					color:#999;
+					line-height:30px;
+					transition: color 0.3s ease;
+				}
+				span{
+					color:#bfbfbf;
+					font-size: 14px;
+					transition: color 0.3s ease;
+				}
+				&:hover{
+					i,p,span{
+						color:$actcolor;
+					}
+					.contactewm{
+						left:0;
+						opacity:1;
+					}
+				}
+			}
+		}
+	}
 }
-#map{
-	width: 100%;
-    height: 320px;
-    font-size: 15px;
-}
-// map end;
+// contact end;
 
 // footer start;
 .footer{
@@ -723,8 +790,10 @@ $actcolor:#00336C;
 	text-align:center;
 	padding:20px 0 10px;
 	.top{
-		height:40px;
-		border-bottom:1px solid #3e3e3e;
+		    height: auto;
+		    border-bottom: 1px solid #3e3e3e;
+		    overflow: hidden;
+		    padding-bottom: 20px;
 		.fl{
 			span{
 				color:$gray9;
@@ -1458,7 +1527,43 @@ $actcolor:#00336C;
     	right:-50px;
     }
 }
-
+@media screen and (max-width: 1200px){
+	.contact .contactbox{
+		width:905px;
+		ul{
+			li{
+				width:300px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 1000px){
+	.contact .contactbox{
+		width:755px;
+		ul{
+			li{
+				width:250px;
+				padding:15px 0;
+				i{
+					margin-left:30px;
+				}
+				p{
+					font-size:15px;
+				}
+				span{
+					font-size:13px;
+				}
+				.contactewm{
+					left:-60px;
+					img{
+						width:85px;
+						height:85px;
+					}
+				}
+			}
+		}
+	}
+}
 @media only screen and (max-width: 992px){
 	.title{
 		padding-top:0;
@@ -1804,6 +1909,19 @@ $actcolor:#00336C;
 	}
 	.rit-f{
 		display: none;
+	}
+	.contact{
+		.contactbox{
+			width:100%;
+			border:none;
+			ul{
+				li{
+					float:none;
+					border:1px solid #d2d2d2;
+					margin:10px auto;
+				}
+			}
+		}
 	}
 }
 @media screen and (max-width:480px){
